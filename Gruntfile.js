@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 		uglify: {
 			default: {
 				files: {
-					'prod/js/base.min.js': ['assets/js/main.js', 'assets/js/plugins.js']
+					'prod/js/base.min.js': ['assets/js/main.js']
 				}
 			}
 		},
