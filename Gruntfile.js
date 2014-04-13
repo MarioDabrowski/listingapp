@@ -10,7 +10,6 @@ module.exports = function(grunt) {
 		php: {
 			dev: {
 				options: {
-					hostname: '0.0.0.0',
 					open: true,
 					keepalive: true
 				}

@@ -1,10 +1,14 @@
 var listing,
-	currentIndex;
+	currentIndex,
+	parentIndex;
 
 // Get everything after the dash
 function afterDash(str) {
 	return str.split('-')[1];
 }
+
+// Focus on input on page load
+$('.input-section').focus();
 
 // Update the listing.json file
 function udateJSON() {
@@ -16,7 +20,7 @@ function udateJSON() {
 		dataType: 'json',
 		type: 'POST',
 		success: function() {
-			$('.info').html('Data has been saved. <a href="#" onclick="location.reload(true); return false;">Refresh the page</a> to see the results.');
+			location.reload();
 		},
 		error: function() {
 			$('.info').html('Failed to save data !');
@@ -32,6 +36,7 @@ $.getJSON('assets/json/listing.json', function(data) {
 	$.each(data.sections, function(key, val) {
 
 		var addItem;
+		parentIndex = key;
 
 		addItem = '<li>';
 		addItem += '<a href="#" class="remove-item" data-name="section-' + key + '">[X]</a> ';
@@ -41,7 +46,7 @@ $.getJSON('assets/json/listing.json', function(data) {
 		if (listing.sections[key].subSections) {
 			$.each(listing.sections[key].subSections, function(key, val) {
 				addItem += '<li>';
-				//addItem += '<a href="#" class="remove-item" data-name="section-' + key + '">[X]</a> ';
+				addItem += '<a href="#" class="remove-item" data-name="section-' + key + '" data-parent="parent-' + parentIndex + '">[X]</a> ';
 				addItem += val.subSection;
 				addItem += '</li>';
 			});
@@ -60,34 +65,34 @@ $.getJSON('assets/json/listing.json', function(data) {
 $('ul').on('click', '.add-sub-section', function() {
 	currentIndex = afterDash($(this).attr('data-name'));
 	$('.input-section').val(listing.sections[currentIndex].section).prop('disabled', true);
-	$('.input-sub-section').show();
-	$('button[data-name="add"]').html('Add Sub Section');
-	$('button[data-name="cancel"]').show();
+	$('.input-sub-section').show().focus();
+	$('[data-name="add"]').html('Add Sub Section');
+	$('[data-name="cancel"]').show();
 
 });
 
 // Cancel Button
-$('button[data-name="cancel"]').on('click', function() {
+$('[data-name="cancel"]').on('click', function() {
 	$('.input-section').val('').prop('disabled', false);
 	$('.input-sub-section').hide();
-	$('button[data-name="add"]').html('Add Section');
+	$('[data-name="add"]').html('Add Section');
 	$(this).hide();
 });
 
 // Remove Items
 $('ul').on('click', '.remove-item', function() {
 	$this = $(this);
-	currentIndex = afterDash($(this).attr('data-name'));
+	currentIndex = afterDash($this.attr('data-name'));
 	if ($this.closest('.section-list')) {
 		listing.sections.splice(currentIndex, 1);
 	} else if ($this.closest('.sub-section-list')) {
-		listing.sections.splice(currentIndex, 1);
+		// listing.sections[parentIndex].subSections.splice(currentIndex, 1);
 	}
 	udateJSON();
 });
 
 // Add Item
-$('button[data-name="add"]').on('click', function() {
+$('[data-name="add"]').on('click', function() {
 
 	if ($('.input-section').is(':disabled')) {
 

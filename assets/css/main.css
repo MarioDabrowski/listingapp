@@ -6,7 +6,7 @@ body {
 a{text-decoration: none;}
 
 .input-sub-section{display:none;}
-button[data-name="cancel"]{display:none;}
+[data-name="cancel"]{display:none;}
 
 input:disabled{border:0; font-weight: bold;}
 
