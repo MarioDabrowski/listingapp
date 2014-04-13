@@ -13,7 +13,7 @@ Write a description here.
 ## Current Functionality
 
 - Ability to add and remove categories
-- Ability to add and remove sub categories
+- Ability to add sub categories
 
 ## Todo
 
