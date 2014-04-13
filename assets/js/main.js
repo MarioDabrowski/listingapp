@@ -4,18 +4,17 @@ var listing;
 $.getJSON("assets/json/listing.json", function(data) {
 	listing = data;
 
-	$.each(data.users, function(key, val) {
-		$('.dbUL').append('<li>' + val.firstName + ' ' + val.lastName + '</li>');
+	$.each(data.sections, function(key, val) {
+		$('ul').append('<li>' + val.section + '</li>');
 	});
 });
 
 //
-$('.myButton').on('click', function() {
+$('button').on('click', function() {
 
-	if ($('.firstName').val() && $('.firstName').val()) {
-		listing.users.push({
-			"firstName": $('.firstName').val(),
-			"lastName": $('.lastName').val()
+	if ($('.section').val()) {
+		listing.sections.push({
+			"section": $('.section').val()
 		});
 
 		$.ajax({
@@ -27,15 +26,15 @@ $('.myButton').on('click', function() {
 			type: 'POST',
 			success: function(json_object) {
 				console.log(json_object);
-				$("#saved").text("Data has been saved.");
+				$(".info").html('Data has been saved. <a href="#" onclick="location.reload(true); return false;">Refresh the page</a> to see the results.');
 			},
 			error: function(json_object) {
 				console.log(json_object);
-				$("#saved").text("Failed to save data !");
+				$(".info").html("Failed to save data !");
 			}
 		});
 	} else {
-		alert('shits empty yo');
+		alert('Please fill out all fields');
 	}
 
 });

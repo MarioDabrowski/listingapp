@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 		//
 		jsbeautifier: {
 			'default': {
-				src: ['bower.json', 'package.json', 'index.html', 'Gruntfile.js', 'assets/css/*.css'],
+				src: ['bower.json', 'package.json', '*.html', 'Gruntfile.js', 'assets/css/*.css'],
 				options: {
 					html: {
 						indentChar: "	",
