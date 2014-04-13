@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 		//
 		watch: {
 			dev: {
-				files: ['Gruntfile.js', 'assets/js/*.js', '*.php', 'assets/css/scss/*.scss', 'tasks/*/*.js'],
+				files: ['Gruntfile.js', 'assets/js/*.js', '*.html', 'index.php', 'assets/css/scss/*.scss', 'tasks/*/*.js'],
 				tasks: ['dev'],
 				options: {
 					livereload: true
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 		//
 		jsbeautifier: {
 			'default': {
-				src: ['bower.json', 'package.json', '*.html', 'Gruntfile.js', 'assets/css/*.css'],
+				src: ['bower.json', 'package.json', '*.html', 'Gruntfile.js', 'assets/*'],
 				options: {
 					html: {
 						indentChar: "	",
