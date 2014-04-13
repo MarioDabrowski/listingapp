@@ -11,7 +11,8 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					hostname: '0.0.0.0',
-					open: true
+					open: true,
+					keepalive: true
 				}
 			}
 		},
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
 		//
 		watch: {
 			dev: {
-				files: ['Gruntfile.js', 'assets/js/*.js', '*.html', 'index.php', 'assets/css/scss/*.scss', 'tasks/*/*.js'],
+				files: ['Gruntfile.js', 'assets/js/*.js', '*.html', 'index.php', 'assets/css/scss/*.scss'],
 				tasks: ['dev'],
 				options: {
 					livereload: true

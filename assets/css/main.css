@@ -1,3 +1,14 @@
 body {
   padding: 40px;
+  line-height: 18px;
 }
+
+a{text-decoration: none;}
+
+.input-sub-section{display:none;}
+button[data-name="cancel"]{display:none;}
+
+input:disabled{border:0; font-weight: bold;}
+
+.section-list{margin-bottom:40px;}
+.section-list li{margin-top:5px;}

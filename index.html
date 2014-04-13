@@ -6,41 +6,47 @@
 <html class="no-js">
 <!--<![endif]-->
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Listing App 0.1.0</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Listing App 0.1.0</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-		<link rel="stylesheet" href="assets/css/main.css">
-	</head>
-	<body>
+	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
 
-		<!--[if lt IE 8]>
+<body>
+
+	<!--[if lt IE 8]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<div class="listing">
-			<p><strong>List of Sections</strong>
-			</p>
-			<ul></ul>
-		</div>
+	<div class="listing">
+		<p><strong>List of Sections</strong>
+		</p>
+		<ul class="section-list"></ul>
+	</div>
 
-		<input type="text" class="section" placeholder="Section Name" />
-		<br />
-		<br />
-		<button>Add Section</button>
-		<br />
-		<br />
-		<div class="info"></div>
+	<input type="text" class="input-section" placeholder="Section Name" />
+	<br />
+	<br />
+	<input type="text" class="input-sub-section" placeholder="Sub Section Name" />
+	<br />
+	<br />
+	<button data-name="add">Add Section</button>
+	<button data-name="cancel">Cancel</button>
+	<br />
+	<br />
+	<div class="info"></div>
 
-		<script src="bower_components/modernizr/modernizr.js"></script>
-		<script src="bower_components/jquery/dist/jquery.js"></script>
-		<script src="assets/js/main.js"></script>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
