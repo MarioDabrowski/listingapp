@@ -13,7 +13,7 @@ Write a description here.
 ## Current Functionality
 
 - Ability to add and remove categories
-- Ability to add and remove sub categories
+- Ability to add sub categories
 
 ## Todo
 
@@ -25,4 +25,4 @@ Write a description here.
 ## Bugs & Issues
 
 - Grunt-php throws [200] errors when the server is running. I have contacted the creator about this issue.
-- The built in grunt like reload isn't working for php pages. To solve this install the [live reload browser plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
+- The built in grunt live reload isn't working for php pages. To solve this install the [live reload browser plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
