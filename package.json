@@ -1,0 +1,35 @@
+{
+  "name": "test_project",
+  "version": "0.0.1",
+  "description": "This is my test project.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "project"
+  ],
+  "author": "Mario Dabrowski",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-html-validation": "~0.1.15",
+    "glob": "~3.2.9",
+    "matchdep": "~0.3.0",
+    "blog": "0.0.3-1",
+    "grunt-jsbeautifier": "~0.2.7",
+    "grunt-githooks": "~0.3.1",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-newer": "~0.7.0",
+    "grunt-php": "~0.3.2"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "~0.4.0"
+  }
+}

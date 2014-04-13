@@ -1,0 +1,32 @@
+{
+	"name": "html",
+	"version": "0.0.1",
+	"authors": [
+		"Mariusz Dabrowski"
+	],
+	"description": "My test project.",
+	"main": "Gruntfile.js",
+	"keywords": [
+		"test",
+		"html"
+	],
+	"license": "MIT",
+	"homepage": "google.com",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"html5-boilerplate": "~4.3.0",
+		"jquery": "1.11.0",
+		"normalize.css": "~3.0.1",
+		"modernizr": "~2.7.2",
+		"html5shiv": "~3.7.0"
+	},
+	"devDependencies": {
+		"modernizr": "~2.7.2"
+	}
+}
