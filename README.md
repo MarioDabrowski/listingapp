@@ -4,7 +4,7 @@ Write a description here.
 
 ## Installation
 
-1. [Install Grunt](http://gruntjs.com/getting-started) if you don't have it yet.
+1. Install [Grunt](http://gruntjs.com/getting-started) if you don't have it yet.
 2. Pull down my repo by clicking the 'Download Zip' button on the right or [clicking here](https://github.com/MarioDabrowski/listingapp/archive/master.zip).
 3. In the folder you downloaded run `npm install` and `bower install`
 4. To launch the app just type `grunt`
