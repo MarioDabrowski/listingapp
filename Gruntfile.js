@@ -110,7 +110,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Tasks
-	grunt.registerTask('default', ['php', 'watch']);
+	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('dev', ['newer:sass', 'autoprefixer', 'jshint', 'validation']);
 
 };

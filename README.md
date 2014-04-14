@@ -21,8 +21,8 @@ Write a description here.
 - Refactor javascript
 - Skin UI
 - Intergrate handlebars
+- Only allow the user to input letters and numbers into the input fields
 
 ## Bugs & Issues
 
-- Grunt-php throws [200] errors when the server is running. I have contacted the creator about this issue.
 - The built in grunt live reload isn't working for php pages. To solve this install the [live reload browser plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).

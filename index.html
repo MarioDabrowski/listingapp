@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
+<body data-status="">
 
 	<!--[if lt IE 8]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -31,14 +31,15 @@
 		<ul class="section-list"></ul>
 	</div>
 	<form>
-	<input type="text" class="input-section" placeholder="Section Name" />
-	<br />
-	<br />
-	<input type="text" class="input-sub-section" placeholder="Sub Section Name" />
-	<br />
-	<br />
-	<button data-name="add">Add Section</button>
-	<button data-name="cancel">Cancel</button>
+		<div class="form-notification"></div>
+		<input type="text" class="input-section" placeholder="Section Name" />
+		<br />
+		<br />
+		<input type="text" class="input-sub-section" placeholder="Sub Section Name" />
+		<br />
+		<br />
+		<button data-name="add">Add Section</button>
+		<button data-name="cancel">Cancel</button>
 	</form>
 	<br />
 	<br />
