@@ -8,7 +8,7 @@ Write a description here.
 2. Pull down my repo by clicking the 'Download Zip' button on the right or [clicking here](https://github.com/MarioDabrowski/listingapp/archive/master.zip).
 3. In the folder you downloaded run `npm install` and `bower install`
 4. To launch the php server run `grunt php`
-5. In a new Temrinal tab run `grunt watch` (This is only temporary, see Bugs & Issues)
+5. In a new Temrinal tab run `grunt watch` to start the task runner
 
 ## Current Functionality
 
@@ -24,5 +24,4 @@ Write a description here.
 
 ## Bugs & Issues
 
-- Grunt-php throws [200] errors when the server is running. I have contacted the creator about this issue.
 - The built in grunt live reload isn't working for php pages. To solve this install the [live reload browser plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
