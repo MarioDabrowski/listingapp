@@ -39,20 +39,20 @@ $.getJSON('assets/json/listing.json', function(data) {
 		parentIndex = key;
 
 		addItem = '<li>';
-		addItem += '<a href="#" class="remove-item" data-index="section-' + key + '">[X]</a> ';
+		addItem += '<a href="#" class="remove-item icon-minus" data-index="section-' + key + '"></a> ';
 		addItem += val.section;
 		addItem += '<ul class="sub-section-list">';
 
 		if (listing.sections[key].subSections) {
 			$.each(listing.sections[key].subSections, function(key, val) {
 				addItem += '<li>';
-				addItem += '<a href="#" class="remove-item" data-index="section-' + key + '" data-index-parent="parent-' + parentIndex + '">[X]</a> ';
+				addItem += '<a href="#" class="remove-item icon-minus" data-index="section-' + key + '" data-index-parent="parent-' + parentIndex + '"></a> ';
 				addItem += val.subSection;
 				addItem += '</li>';
 			});
 		}
 
-		addItem += '<li><a href="#" class="add-sub-section" data-index="section-' + key + '">[+]</a></li>';
+		addItem += '<li><a href="#" class="add-item icon-plus" data-index="section-' + key + '"></a></li>';
 		addItem += '</ul>';
 		addItem += '</li>';
 
@@ -64,7 +64,8 @@ $.getJSON('assets/json/listing.json', function(data) {
 // Cancel Button
 $('[data-name="cancel"]').on('click', function() {
 	$('.input-section').show();
-	$('.input-sub-section, .form-notification').hide();
+	$('.input-sub-section').hide();
+	$('.form-notification').html('Add a section');
 	$('[data-name="add"]').html('Add Section');
 	$(this).hide();
 });
@@ -94,16 +95,16 @@ $('ul').on('click', '.remove-item', function() {
 
 
 // Add sub section button
-$('ul').on('click', '.add-sub-section', function() {
+$('ul').on('click', '.add-item', function() {
 
 	// Keep track of which sub section you clicked on
 	currentIndex = afterDash($(this).attr('data-index'));
 
-	// Let the page know you're in add-sub-section state
-	$('body').attr('data-status', 'add-sub-section');
+	// Let the page know you're in add-item state
+	$('body').attr('data-status', 'add-item');
 
 	$('.input-section').hide();
-	$('.form-notification').show().html('Add a subsection to ' + listing.sections[currentIndex].section);
+	$('.form-notification').show().html('Add a sub section to <strong>' + listing.sections[currentIndex].section + '</strong>');
 	$('.input-sub-section').show().focus();
 	$('[data-name="add"]').html('Add Sub Section');
 	$('[data-name="cancel"]').show();
@@ -111,7 +112,7 @@ $('ul').on('click', '.add-sub-section', function() {
 
 // Add Item
 $('[data-name="add"]').on('click', function() {
-	if ($('body').attr('data-status') == 'add-sub-section') {
+	if ($('body').attr('data-status') == 'add-item') {
 		// If we're dealing with adding a sub section
 
 		if ($('.input-sub-section').val()) {

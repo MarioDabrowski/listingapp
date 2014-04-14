@@ -1,14 +1,115 @@
 body {
   padding: 40px;
   line-height: 18px;
+  font-size: 14px;
 }
 
-a{text-decoration: none;}
+h2 {
+  margin: 0 0 20px 0;
+  text-decoration: underline;
+}
 
-.input-sub-section{display:none;}
-[data-name="cancel"]{display:none;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-input:disabled{border:0; font-weight: bold;}
+ul ul {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
 
-.section-list{margin-bottom:40px;}
-.section-list li{margin-top:5px;}
+.section-list > li {
+  font-weight: bold;
+}
+
+.section-list > li li {
+  font-weight: normal;
+}
+
+.form-notification {
+  margin-bottom: 10px;
+}
+
+.form-options {
+  margin-top: 10px;
+}
+
+button + button {
+  margin-left: 6px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.add-item,
+.remove-item {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.add-item {
+  color: #68b145;
+}
+
+.remove-item {
+  color: #f7363c;
+}
+
+.add-item:hover,
+.remove-item:hover {
+  color: #1e2022;
+}
+
+.input-sub-section {
+  display: none;
+}
+
+[data-name="cancel"] {
+  display: none;
+}
+
+input:disabled {
+  border: 0;
+  font-weight: bold;
+}
+
+.section-list {
+  margin-bottom: 40px;
+}
+
+.section-list li {
+  margin-top: 5px;
+}
+
+@font-face {
+  font-family: 'listing-icons';
+  src: url("../fonts/listing-icons.eot?-34ivej");
+  src: url("../fonts/listing-icons.eot?#iefix-34ivej") format("embedded-opentype"), url("../fonts/listing-icons.woff?-34ivej") format("woff"), url("../fonts/listing-icons.ttf?-34ivej") format("truetype"), url("../fonts/listing-icons.svg?-34ivej#listing-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'listing-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:before {
+  content: "\6d";
+}
+
+.icon-plus:before {
+  content: "\70";
+}
